@@ -1,1 +1,15 @@
-docker file
+run mysql docker container
+Ref
+
+docker pull mysql docker pull mysql/mysql-server:latest
+cek imagedocker images
+docker run mysql docker run -p 3307:3307 -d --name=mysql mysql/mysql-server:latest
+cek run container docker ps
+find default pass mysql docker logs mysql
+run mysql docker in bash docker exec -it mysql bash
+login to mysql in bashmysql -u root -p copy and paste pass mysql from find logs mysql
+create new user and pass
+CREATE USER 'hakim'@'%%' IDENTIFIED BY 'sap123';
+GRANT ALL PRIVILEGES ON  *.* to 'hakim'@'%%' WITH GRANT OPTION;
+restart mysqlsudo systemctl start mysqld
+cek status mysql sudo systemctl status mysqld
