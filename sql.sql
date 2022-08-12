@@ -47,7 +47,7 @@ PREPARE statement FROM @CMD;
 
 EXECUTE statement;
 
-
+# create procedure export mysql table to .csv file
 DELIMITER //
 CREATE PROCEDURE spToCsv()
 BEGIN
@@ -67,3 +67,10 @@ BEGIN
 END //
     
 DELIMITER ;
+
+
+# delete / drop procedure mysql
+drop procedure spToCsv;
+
+# show list procedure mysql
+show procedure status;
